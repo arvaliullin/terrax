@@ -2,3 +2,4 @@ out/
 target/
 pkg/
 Cargo.lock
+doc/~$*.docx
