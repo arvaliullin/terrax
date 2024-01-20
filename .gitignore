@@ -3,3 +3,4 @@ target/
 pkg/
 Cargo.lock
 doc/~$*.docx
+.idea/
