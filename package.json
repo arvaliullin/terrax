@@ -5,10 +5,9 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node ./bin/www",
-    "hello_py": "python ./cmd/helloworld/main.py",
+    "hello_py": "python3 ./cmd/helloworld/main.py",
     "helloworld": "node ./cmd/helloworld/main.js"
   },
-
   "keywords": [],
   "author": "Artur Valiullin"
 }
