@@ -8,13 +8,13 @@ for ((i=1; i<=n; i++))
 do
     # Запускаем команду и сохраняем время выполнения
     start_time=$(date +%s%3N)
-    bun $PWD/scripts/js_bench.js
+    bun $PWD/scripts/rs_bench.js
     end_time=$(date +%s%3N)
-    
+
     # Вычисляем время выполнения команды и добавляем его к общему времени
     execution_time=$((end_time - start_time))
     total_time=$((total_time + execution_time))
-    
+
     # echo "Итерация $i: Время выполнения - $execution_time миллисекунд"
 done
 

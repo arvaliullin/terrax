@@ -17,7 +17,7 @@ function x2Integrate(xmin, xmax, intervals_count) {
 
 function printJsResult() {
     let value = x2Integrate(0.0, 100.0, 10000);
-    console.log(`Value js:\t ${value}`)
+    // console.log(`Value js:\t ${value}`)
 }
 
 printJsResult();

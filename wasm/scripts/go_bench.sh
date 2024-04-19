@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Устанавливаем количество итераций
-n=10
+n=100
 total_time=0
 
 for ((i=1; i<=n; i++))
@@ -15,7 +15,7 @@ do
     execution_time=$((end_time - start_time))
     total_time=$((total_time + execution_time))
     
-    echo "Итерация $i: Время выполнения - $execution_time миллисекунд"
+    # echo "Итерация $i: Время выполнения - $execution_time миллисекунд"
 done
 
 # Считаем среднее время выполнения

@@ -13,7 +13,7 @@ async function runWasm() {
 
     globalThis.x2Integrate(0.0, 100.0, 10000);
     let value = globalThis.x2Integrate(0.0, 100.0, 10000);
-    console.log(`Value go:\t ${value}`)
+    // console.log(`Value go:\t ${value}`)
 }
 
 runWasm();
