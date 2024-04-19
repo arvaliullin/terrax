@@ -1,6 +1,6 @@
-
-if (process.argv.length < 3)
+if (process.argv.length < 3) {
     return;
+}
 
 var ITERATION_COUNT = process.argv[2];
 console.log(`Количество итераций ${ITERATION_COUNT}`)
@@ -59,3 +59,35 @@ async function runWasm() {
 }
 
 runWasm();
+
+function f(x) {
+    return x * x;
+}
+
+function x2Integrate(xmin, xmax, intervals_count) {
+    let dx = (xmax - xmin) / intervals_count;
+    let total = 0.0;
+    let x = xmin;
+    for (let i = 1; i < intervals_count; i++) {
+        total = total + dx * (f(x) + f(x + dx)) / 2.0;
+        x = x + dx;
+    }
+    return total;
+}
+
+
+function printPerfomanceJs() {
+    let everage_time = 0.0;
+    let total = 0.0;
+    for (let i = 0; i < ITERATION_COUNT; i++) {
+        let start = performance.now();
+        x2Integrate(0.0, 100.0, 10000);
+        let end = performance.now();
+        total = total + (end - start);
+    }
+
+    everage_time = total / ITERATION_COUNT;
+    console.log(`Perfomans js:\t ${everage_time.toFixed(4)} ms`)
+}
+
+printPerfomanceJs();
